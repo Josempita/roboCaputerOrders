@@ -25,6 +25,8 @@ spec:
           value: RoboClusters
         - name: MONGOURL
           value: mongodb://robo-dev-mongodb:27017
+        - name: AMQPURL
+          value: amqp://roborabbitmq:5672
         image: sabbour/captureorderack-netcore
         name: caporderack
         resources: {}
