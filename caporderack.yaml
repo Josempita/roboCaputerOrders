@@ -17,6 +17,7 @@ spec:
       creationTimestamp: null
       labels:
         app: caporderack
+        purpose: capture-orders-balance
     spec:
       containers:
       - env:
@@ -33,6 +34,9 @@ kind: Service
 apiVersion: v1
 metadata:
   name: caporderack-svc
+  labels:
+    app: caporderack
+    purpose: capture-orders-balance
 spec:
   selector:
     app: caporderack
