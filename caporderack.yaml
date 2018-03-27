@@ -23,7 +23,7 @@ spec:
         - name: TEAMNAME
           value: RoboClusters
         - name: MONGOURL
-          value: mongodb://robo-dev-mongodb:27017
+          value: mongodb://robo-dev-cosmos-db:qLL3oTfiz9vrv8LbyD6Rld1kmDUbMwkSdhfVQgZXsTmQ9OmRXrhKHmADGpujz6sfUyVkMuJP9PoltOTNFb2bQQ==@robo-dev-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb
         - name: EVENTURL
           value: "https://robo-dev-event-hub.servicebus.windows.net/robo-dev-event-hub"
         - name: EVENTPOLICYNAME
