@@ -1,0 +1,41 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: caporderack
+    purpose: capture-orders
+  name: caporderack
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: caporderack
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: caporderack
+    spec:
+      containers:
+      - env:
+        - name: TEAMNAME
+          value: RoboClusters
+        image: sabbour/captureorderack-netcore
+        name: caporderack
+        resources: {}
+status: {}
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: caporderack-svc
+spec:
+  selector:
+    app: caporderack
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
