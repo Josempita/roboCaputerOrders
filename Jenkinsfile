@@ -1,9 +1,13 @@
 node {
+    environment {
+        KUBECONFIG='/var/kube'
+    }
   def project = 'robo-rabbit'
   def appName = 'caporderack'
   def feSvcName = "caporderack-svc"
   def imageTag = "sabbour/captureorderack-netcore"
   def teamName = "ROBO-CLUSTERS"
+
 
   //-----Dev Env Vars----//
   def devMongoKey = "mongodb://robo-dev-cosmos-db:qLL3oTfiz9vrv8LbyD6Rld1kmDUbMwkSdhfVQgZXsTmQ9OmRXrhKHmADGpujz6sfUyVkMuJP9PoltOTNFb2bQQ==@robo-dev-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
