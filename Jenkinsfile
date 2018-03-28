@@ -1,7 +1,4 @@
 node {
-    environment {
-        KUBECONFIG='/var/kube'
-    }
   def project = 'robo-rabbit'
   def appName = 'caporderack'
   def feSvcName = "caporderack-svc"
