@@ -6,13 +6,13 @@ node {
   def teamName = "ROBO-CLUSTERS"
 
   //-----Dev Env Vars----//
-  def devMongoKey = "qLL3oTfiz9vrv8LbyD6Rld1kmDUbMwkSdhfVQgZXsTmQ9OmRXrhKHmADGpujz6sfUyVkMuJP9PoltOTNFb2bQQ==@robo-dev-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
+  def devMongoKey = "mongodb://robo-dev-cosmos-db:qLL3oTfiz9vrv8LbyD6Rld1kmDUbMwkSdhfVQgZXsTmQ9OmRXrhKHmADGpujz6sfUyVkMuJP9PoltOTNFb2bQQ==@robo-dev-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
   def devEventPol = "Ea6RMUMhTXF00gF5cmasQUzYTlVNu//zK8F9dSIt8Hw="
   def devAMPQURL = "amqps://RootManageSharedAccessKey:Ea6RMUMhTXF00gF5cmasQUzYTlVNu%2F%2FzK8F9dSIt8Hw%3D@robo-dev-event-hub.servicebus.windows.net/robo-dev-event-hub"
   
   //-----Prod Env Vars----//
-  def prodMongoKey = "qLL3oTfiz9vrv8LbyD6Rld1kmDUbMwkSdhfVQgZXsTmQ9OmRXrhKHmADGpujz6sfUyVkMuJP9PoltOTNFb2bQQ==@robo-dev-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
-  def prodEventPol = "Ea6RMUMhTXF00gF5cmasQUzYTlVNu//zK8F9dSIt8Hw="
+  def prodMongoKey = "mongodb://robo-cosmos-db:EnEPexfG6ONZP4x2NvNimhGX3NQy1zuPid7kCPiKn6KkS1gXx3p5rErNgrlyvTXbLLfLdpENFAWd856pFxlEqg==@robo-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
+  def prodEventPol = "rPNjMS4vqhL0OZ3SrpIsL0Z8CZ67cIdxQM9Ig4GkRdE="
   def prodAMPQURL = "amqps://RootManageSharedAccessKey:Ea6RMUMhTXF00gF5cmasQUzYTlVNu%2F%2FzK8F9dSIt8Hw%3D@robo-dev-event-hub.servicebus.windows.net/robo-dev-event-hub"
   
   checkout scm

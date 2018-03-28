@@ -23,7 +23,7 @@ spec:
         - name: TEAMNAME
           value: TEAM-NAME
         - name: MONGOURL
-          value: mongodb://NAME-SPACE-cosmos-db:MONGO-KEY
+          value: MONGO-KEY
         - name: EVENTURL
           value: "https://NAME-SPACE-event-hub.servicebus.windows.net/"
         - name: EVENTPOLICYNAME
