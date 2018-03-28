@@ -36,7 +36,7 @@ node {
         sh("sed -i.bak 's#MONGO-KEY#${devMongoKey}#' ./k8s/*.yaml")
         sh("sed -i.bak 's#EVENT-POLICY#${devEventPol}#' ./k8s/*.yaml")
         sh("sed -i.bak 's#AMQP-URL#${devAMPQURL}#' ./k8s/*.yaml")
-        sh("kubectl --namespace=robo-dev apply -f k8s/")
+        sh("kubectl --kubeconfig=/var/kube/config --namespace=robo-dev apply -f k8s/")
             break
     // Roll out to production
     case "robo-prod":
@@ -44,7 +44,7 @@ node {
         sh("sed -i.bak 's#MONGO-KEY#${prodMongoKey}#' ./k8s/*.yaml")
         sh("sed -i.bak 's#EVENT-POLICY#${prodEventPol}#' ./k8s/*.yaml")
         sh("sed -i.bak 's#AMQP-URL#${prodAMPQURL}#' ./k8s/*.yaml")
-        sh("kubectl --namespace=robo-prod apply -f k8s/")
+        sh("kubectl  --kubeconfig=/var/kube/config  --namespace=robo-prod apply -f k8s/")
             break
     // Roll out a dev environment
     default:
