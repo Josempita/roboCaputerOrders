@@ -1,0 +1,53 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: APP-NAME
+    purpose: capture-orders
+  name: APP-NAME
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: APP-NAME
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: APP-NAME
+    spec:
+      containers:
+      - env:
+        - name: TEAMNAME
+          value: TEAM-NAME
+        - name: MONGOURL
+          value: mongodb://NAME-SPACE-cosmos-db:MONGO-KEY
+        - name: EVENTURL
+          value: "https://NAME-SPACE-event-hub.servicebus.windows.net/"
+        - name: EVENTPOLICYNAME
+          value: "RootManageSharedAccessKey"
+        - name: EVENTPOLICYKEY
+          value: "EVENT-POLICY"
+        - name: PARTITIONKEY
+          value: "1"
+        - name: AMQPURL
+          value: AMQP-URL
+        image: DOCKER-IMAGE
+        name: APP-NAME
+        resources: {}
+status: {}
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: SVC-NAME
+spec:
+  selector:
+    app: APP-NAME
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
