@@ -14,7 +14,7 @@ node {
   //-----Prod Env Vars----//
   def prodMongoKey = "mongodb://robo-cosmos-db:EnEPexfG6ONZP4x2NvNimhGX3NQy1zuPid7kCPiKn6KkS1gXx3p5rErNgrlyvTXbLLfLdpENFAWd856pFxlEqg==@robo-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
   def prodEventPol = "rPNjMS4vqhL0OZ3SrpIsL0Z8CZ67cIdxQM9Ig4GkRdE="
-  def prodAMPQURL = "amqps://RootManageSharedAccessKey:Ea6RMUMhTXF00gF5cmasQUzYTlVNu%2F%2FzK8F9dSIt8Hw%3D@robo-dev-event-hub.servicebus.windows.net/robo-dev-event-hub"
+  def prodAMPQURL = "amqps://RootManageSharedAccessKey:rPNjMS4vqhL0OZ3SrpIsL0Z8CZ67cIdxQM9Ig4GkRdEw%3D@robo-prod-event-hub.servicebus.windows.net/robo-prod-event-hub"
   
   checkout scm
 
