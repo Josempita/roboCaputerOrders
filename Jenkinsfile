@@ -11,9 +11,9 @@ node {
   def devAMPQURL = "amqps://RootManageSharedAccessKey:Ea6RMUMhTXF00gF5cmasQUzYTlVNu%2F%2FzK8F9dSIt8Hw%3D@robo-dev-event-hub.servicebus.windows.net/robo-dev-event-hub"
   
   //-----Prod Env Vars----//
-  def devMongoKey = "qLL3oTfiz9vrv8LbyD6Rld1kmDUbMwkSdhfVQgZXsTmQ9OmRXrhKHmADGpujz6sfUyVkMuJP9PoltOTNFb2bQQ==@robo-dev-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
-  def devEventPol = "Ea6RMUMhTXF00gF5cmasQUzYTlVNu//zK8F9dSIt8Hw="
-  def devAMPQURL = "amqps://RootManageSharedAccessKey:Ea6RMUMhTXF00gF5cmasQUzYTlVNu%2F%2FzK8F9dSIt8Hw%3D@robo-dev-event-hub.servicebus.windows.net/robo-dev-event-hub"
+  def prodMongoKey = "qLL3oTfiz9vrv8LbyD6Rld1kmDUbMwkSdhfVQgZXsTmQ9OmRXrhKHmADGpujz6sfUyVkMuJP9PoltOTNFb2bQQ==@robo-dev-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb"
+  def prodEventPol = "Ea6RMUMhTXF00gF5cmasQUzYTlVNu//zK8F9dSIt8Hw="
+  def prodAMPQURL = "amqps://RootManageSharedAccessKey:Ea6RMUMhTXF00gF5cmasQUzYTlVNu%2F%2FzK8F9dSIt8Hw%3D@robo-dev-event-hub.servicebus.windows.net/robo-dev-event-hub"
   
   checkout scm
 
